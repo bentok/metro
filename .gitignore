@@ -60,3 +60,6 @@ Ankh.NoLoad
 
 #Other
 .svn
+
+#dotnet
+packages/
