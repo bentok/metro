@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metro", "Metro.csproj", "{72162CC6-5834-4789-A01A-E4E691FD2E6D}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "MetroFS", "MetroFS\MetroFS.fsproj", "{DFBBED3D-5035-4A6C-BF16-9B28AFECED05}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	Release|Any CPU = Release|Any CPU
+	Tools|Any CPU = Tools|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{72162CC6-5834-4789-A01A-E4E691FD2E6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72162CC6-5834-4789-A01A-E4E691FD2E6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72162CC6-5834-4789-A01A-E4E691FD2E6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72162CC6-5834-4789-A01A-E4E691FD2E6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72162CC6-5834-4789-A01A-E4E691FD2E6D}.Tools|Any CPU.ActiveCfg = Tools|Any CPU
+		{72162CC6-5834-4789-A01A-E4E691FD2E6D}.Tools|Any CPU.Build.0 = Tools|Any CPU
+		{DFBBED3D-5035-4A6C-BF16-9B28AFECED05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFBBED3D-5035-4A6C-BF16-9B28AFECED05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFBBED3D-5035-4A6C-BF16-9B28AFECED05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFBBED3D-5035-4A6C-BF16-9B28AFECED05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFBBED3D-5035-4A6C-BF16-9B28AFECED05}.Tools|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFBBED3D-5035-4A6C-BF16-9B28AFECED05}.Tools|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+EndGlobal
