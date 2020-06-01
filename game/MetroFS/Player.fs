@@ -11,4 +11,5 @@ type PlayerFs() =
         
     override this._PhysicsProcess (delta) =
         velocity.y <- velocityYFunc(velocity.y, delta)
-        this.MoveAndSlide(velocity) |> ignore
+        this.MoveAndSlide(Vector2(Input.GetActionStrength("move_right") - Input.GetActionStrength("move_left"), 0.00f) * speed) |> ignore
+        
