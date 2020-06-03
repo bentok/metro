@@ -9,7 +9,14 @@ type PlayerFs() =
     override this._Ready() = 
         GD.Print("F# is ready")
         
-    override this._PhysicsProcess (delta) =
-        velocity.y <- velocityYFunc(velocity.y, delta)
-        this.MoveAndSlide(Vector2(Input.GetActionStrength("move_right") - Input.GetActionStrength("move_left"), 0.00f) * speed) |> ignore
+    override this._PhysicsProcess delta =
+        // Update Y velocity in game loop
+        velocity.y <- velocity.y
+            |> velocityYFunc
+            |> fun applyDelta -> applyDelta delta
         
+        // Apply horizontal directional input 
+        (Input.GetActionStrength("move_right"), Input.GetActionStrength("move_left"))
+            |> directionalVelocity
+            |> this.MoveAndSlide
+            |> ignore
