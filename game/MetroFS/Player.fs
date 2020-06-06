@@ -10,13 +10,17 @@ type PlayerFs() =
         GD.Print("F# is ready")
 
     override this._PhysicsProcess delta =
-        // Update Y velocity in game loop
-        velocity.y <- velocity.y
-            |> velocityYFunc
-            |> fun applyDelta -> applyDelta delta
-
         // Apply horizontal directional input
-        (Input.GetActionStrength("move_right"), Input.GetActionStrength("move_left"))
-            |> directionalVelocity
-            |> this.MoveAndSlide
-            |> ignore
+        let direction = getDirection(Input.GetActionStrength("move_right"),
+                                     Input.GetActionStrength("move_left"),
+                                     Input.GetActionStrength("jump"),
+                                     Input.IsActionJustPressed("jump"),
+                                     this.IsOnFloor())
+        let isJumpInterrupted = getIsJumpInterrupted(Input.IsActionJustReleased("jump"), velocity)
+        let snap = if direction.y = 0.00f then Vector2.Down * 60.00f else Vector2.Down
+
+        velocity <- (velocity, direction, speed, isJumpInterrupted)
+            |> calculateMoveVelocity
+
+        this.MoveAndSlideWithSnap(velocity, snap, System.Nullable(Vector2.Up), true) |> ignore
+
