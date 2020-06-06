@@ -46,7 +46,6 @@
     <ItemGroup>
         <Compile Include="AssemblyInfo.fs" />
         <Compile Include="Physics.fs" />
-        <Compile Include="Movement.fs" />
         <Compile Include="Player.fs" />
         <None Include="Script.fsx" />
         <Content Include="packages.config" />

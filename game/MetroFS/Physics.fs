@@ -2,10 +2,9 @@ module PhysicsFs
 open Godot
 
 let FLOOR_NORMAL = Vector2.Up
-let speed = Vector2(400.00f, 500.00f)
-let gravity = 3500.00f
+let speed = 1200.0f
+let gravity = 4000.0f
+let jumpSpeed = -1800.0f
+let friction = 0.1f
+let acceleration = 0.25f
 let mutable velocity = Vector2.Zero
-
-let velocityYFunc veloY delta =
-    [veloY + gravity * delta; speed.y]
-    |> List.min
