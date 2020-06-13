@@ -5,7 +5,15 @@ open PhysicsFs
 type PlayerFs() =
     inherit KinematicBody2D()
 
+    override this._Ready() =
+        this.ApplyScale(Vector2(0.5f, 0.5f))
+
     override this._PhysicsProcess delta =
+        this.Rotate(0.05f)
+        this.Scale
+            |> this.updateScale
+            |> this.ApplyScale
+
         let mutable dir = 0.0f
         if Input.IsActionPressed("move_right")
             then dir <- dir + 1.0f
@@ -14,7 +22,15 @@ type PlayerFs() =
         if dir <> 0.0f
             then velocity.x <- Mathf.Lerp(velocity.x, dir * speed, acceleration)
             else velocity.x <- Mathf.Lerp(velocity.x, 0.0f, friction)
-        velocity.y <- gravity * delta
-        if Input.IsActionJustPressed("jump") && this.IsOnFloor()
-            then velocity.y <- jumpSpeed
+        // Gravity unlocks when the PC powers up
+//        velocity.y <- gravity * delta
+//        if Input.IsActionJustPressed("jump") && this.IsOnFloor()
+//            then velocity.y <- jumpSpeed
         this.MoveAndSlide(velocity, System.Nullable(Vector2.Up)) |> ignore
+
+
+    member this.updateScale scale =
+        scale
+        |> fun a -> if a.x > 0.2f then (0.99f, 0.99f)
+                    else (4.0f, 4.0f)
+        |> Vector2
