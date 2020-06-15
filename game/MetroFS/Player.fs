@@ -10,9 +10,6 @@ type PlayerFs() =
 
     override this._PhysicsProcess delta =
         this.Rotate(0.05f)
-        this.Scale
-            |> this.updateScale
-            |> this.ApplyScale
 
         let mutable dir = 0.0f
         if Input.IsActionPressed("move_right")
@@ -27,10 +24,3 @@ type PlayerFs() =
 //        if Input.IsActionJustPressed("jump") && this.IsOnFloor()
 //            then velocity.y <- jumpSpeed
         this.MoveAndSlide(velocity, System.Nullable(Vector2.Up)) |> ignore
-
-
-    member this.updateScale scale =
-        scale
-        |> fun a -> if a.x > 0.2f then (0.99f, 0.99f)
-                    else (4.0f, 4.0f)
-        |> Vector2

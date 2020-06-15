@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/0x72_16x16RobotTileset.v1.png-1f4da5b09312b78d78a1d6c386cf0f27.stex"
+path="res://.import/synapse-spritesheet-1.png-5c0874ce1511697a0c6460b514aa9a8d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/0x72_16x16RobotTileset.v1.png"
-dest_files=[ "res://.import/0x72_16x16RobotTileset.v1.png-1f4da5b09312b78d78a1d6c386cf0f27.stex" ]
+source_file="res://assets/synapse-spritesheet-1.png"
+dest_files=[ "res://.import/synapse-spritesheet-1.png-5c0874ce1511697a0c6460b514aa9a8d.stex" ]
 
 [params]
 

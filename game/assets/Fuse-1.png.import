@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Metro floor_walls-1.png-bb1406f66ffa9fd1e0f91d7e2f8d8872.stex"
+path="res://.import/Fuse-1.png-4472608b65fec41851b05c380679b5b6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Metro floor_walls-1.png"
-dest_files=[ "res://.import/Metro floor_walls-1.png-bb1406f66ffa9fd1e0f91d7e2f8d8872.stex" ]
+source_file="res://assets/Fuse-1.png"
+dest_files=[ "res://.import/Fuse-1.png-4472608b65fec41851b05c380679b5b6.stex" ]
 
 [params]
 
