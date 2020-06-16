@@ -105,7 +105,7 @@ cell_size = Vector2( 16, 16 )
 collision_layer = 8
 collision_mask = 0
 format = 1
-tile_data = PoolIntArray( 458760, 2, 0, 458765, 2, 0, 458769, 1, 0 )
+tile_data = PoolIntArray( 458760, 2, 0, 458765, 2, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 167, 119 )
